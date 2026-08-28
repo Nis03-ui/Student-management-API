@@ -1,7 +1,16 @@
-const dotenv=require("dotenv").config()
-const express=require("express")
-const app=express()
 
-app.use(express.json())
+import dotenv from "dotenv";
+dotenv.config();
 
-module.exports=app
+import express from "express";
+
+import studentAPI from "./routes/student.routes.js";
+
+const app = express();
+
+app.use(express.json());
+
+app.use("/student/api", studentAPI);
+
+export default app;
+

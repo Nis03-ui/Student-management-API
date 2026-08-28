@@ -11,3 +11,9 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+model students{
+  id Int @id @default(autoincrement())
+  Name String
+  Class_s Int
+  
+}
